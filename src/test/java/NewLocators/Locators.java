@@ -19,8 +19,8 @@ public static void main(String[] args) {
 	driver.manage().window().maximize();
 	driver.navigate().to("https://selectorshub.com/xpath-practice-page/");
 	System.out.println(driver.getTitle());
-	WebElement element = driver.findElement(RelativeLocator.with(By.xpath("//a[normalize-space()='Jasmine.Morgan']")).near(By.xpath("//input[@type='checkbox']")));
-String text = element.getText();System.out.println(text);	
+	WebElement element = driver.findElement(RelativeLocator.with(By.xpath("//input[@type='checkbox']")).toLeftOf(By.xpath("//a[normalize-space()='Jasmine.Morgan']")));
+element.click();
 }
 
 }
